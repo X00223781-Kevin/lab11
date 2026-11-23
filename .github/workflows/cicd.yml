@@ -22,8 +22,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  ci-test:
+    steps:
+      - uses: action/checkout@v4
+      - uses: lra/validate-html2@v1
+        with:
+          file: index.html
   # Single deploy job since we're just deploying
-  deploy:
+  cd-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
