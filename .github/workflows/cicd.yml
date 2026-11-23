@@ -28,9 +28,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Validate html
-        uses: lra/validate-html2@v1
+        uses: Cyb3r-Jak3/hyml5validator-action@7.2.0
         with:
-          file: index.html
+          root: .
+          blacklist: invalid[]
   # Single deploy job since we're just deploying
   cd-deploy:
     environment:
