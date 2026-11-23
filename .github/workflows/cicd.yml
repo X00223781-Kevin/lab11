@@ -26,9 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Validate html
-      - uses: lra/validate-html2@v1
+        uses: lra/validate-html2@v1
         with:
           file: index.html
   # Single deploy job since we're just deploying
