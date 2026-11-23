@@ -23,6 +23,7 @@ concurrency:
 
 jobs:
   ci-test:
+    runs-on: ubuntu-latest
     steps:
       - uses: action/checkout@v4
       - uses: lra/validate-html2@v1
