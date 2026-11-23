@@ -25,7 +25,9 @@ jobs:
   ci-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v4
+      - name: Checkout
+      - uses: actions/checkout@v4
+      - name: Validate html
       - uses: lra/validate-html2@v1
         with:
           file: index.html
